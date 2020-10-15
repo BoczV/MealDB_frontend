@@ -1,0 +1,3 @@
+type MealCategory = {
+    strCategory: string
+}
