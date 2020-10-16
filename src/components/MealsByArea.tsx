@@ -3,25 +3,24 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import { Meal } from './Meal';
 
-
-function Meals() {
-    const {mealCategory} = useParams()
+function MealsByArea() {
+    const { mealArea } = useParams()
     const [meals, setMeals] = useState<Meal[]>()
 
     useEffect(() => {
-        const url = `http://localhost:8762/mealservice/meal/${mealCategory}`
+        const url = `http://localhost:8762/mealservice/meal-area/${mealArea}`
         Axios.get(url).then((data) => {
             setMeals(data.data.meals)
         })
     }, [])
     return (
         <div>
-            <h1>Meals based on Beef</h1>
+            <h1>{mealArea}</h1>
             {meals?.map((meal) => (
-                <Meal key={meal.idMeal} meal={meal}/>
+                 <Meal key={meal.idMeal} meal={meal}/>
             ))}
         </div>
     )
 }
 
-export default Meals
+export default MealsByArea

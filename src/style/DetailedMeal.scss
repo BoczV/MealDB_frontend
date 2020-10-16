@@ -1,0 +1,161 @@
+$color: #336699;
+$breakpoint: 768px;
+
+img {
+  max-width: 100%;
+}
+
+.buy-grid {
+  @media (min-width: $breakpoint) {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero-image header"
+      "hero-image selection"
+      "hero-image specs";
+  }
+}
+
+header {
+  padding-bottom: 3rem;
+  grid-area: header;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.hero-image-wrapper {
+  grid-area: hero-image;
+  height: 100%;
+}
+
+.hero-image-element {
+  @media (min-width: $breakpoint) {
+    position: sticky;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+  }
+}
+
+.hero-image-element:hover {
+  cursor: pointer;
+  transform: scale(
+    1.05
+  ); /* (110% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.selection {
+  grid-area: selection;
+  padding-bottom: 3rem;
+}
+
+.selection-row {
+  padding-bottom: 2rem;
+}
+
+.swatch {
+  width: 36px;
+  height: 36px;
+  background-color: #ededed;
+  text-align: center;
+  line-height: 36px;
+  display: inline-block;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: $color;
+  width: 100%;
+  display: block;
+}
+
+.swatch.color {
+  background-color: $color;
+
+  &:nth-of-type(2) {
+    background-color: darken($color, 10%);
+  }
+
+  &:nth-of-type(3) {
+    background-color: darken($color, 15%);
+  }
+  &:nth-of-type(4) {
+    background-color: darken($color, 20%);
+  }
+  &:nth-of-type(5) {
+    background-color: darken($color, 25%);
+  }
+}
+
+.specs-table {
+  padding-bottom: 3rem;
+}
+
+.specs-table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.spec-table-label {
+  font-weight: 700;
+}
+
+.spec-table-description {
+  color: #999;
+}
+
+.callout img {
+  width: 100%;
+}
+
+.player {
+  @media (min-width: $breakpoint) {
+    position: sticky;
+    top: 27rem;
+    left: 20rem;
+  }
+  background: none;
+  width: 4.375rem;
+  height: 4.375rem;
+  border: solid 5px #fff;
+  border-radius: 100%;
+  z-index: 15;
+  text-indent: -9999px;
+  box-shadow: 1px 1px 3px #999999;
+}
+
+.player span {
+  width: 0;
+  height: 0;
+  border-top: 0.9375rem solid transparent;
+  border-left: 1.25rem solid #fff;
+  border-bottom: 0.9375rem solid transparent;
+  position: absolute;
+  top: 20%;
+  left: 36%;
+}
+
+.player:hover {
+  background: #4ccaea;
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  position: sticky;
+  width: 4.375rem;
+  height: 4.375rem;
+  box-shadow: none;
+}
+
+.player:hover span {
+  top: 25%;
+  left: 38%;
+}

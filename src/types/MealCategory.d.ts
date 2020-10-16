@@ -1,3 +1,6 @@
 type MealCategory = {
-    strCategory: string
+    strCategory: string,
+    idCategory: string,
+    strCategoryThumb: string,
+    strCategoryDescription: string
 }

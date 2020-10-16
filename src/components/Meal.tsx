@@ -12,7 +12,7 @@ export const Meal: React.FC<MealProps> = ({meal}) => {
             <div className="overlay" style={{backgroundImage: `url(${meal.strMealThumb})`,
                 backgroundSize: "20rem auto",}}>
                 <h2 className="title">{meal.strMeal}</h2>
-                <a className="link" href={`/meal/category/${meal.idMeal}`}>Open</a>
+                <a className="link" href={`/meal/${meal.idMeal}`}>Open</a>
             </div>
         </div>
     )

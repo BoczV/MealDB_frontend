@@ -15,19 +15,19 @@ export default function NavBar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/book">Books</a>
+            <a href="/search">Search!</a>
           </li>
           <li>
-            <a href="/chapter">Chapters</a>
+            <a href="/area">Areas</a>
           </li>
           <li>
-            <a href="/movie">Movies</a>
+            <a href="/category">Categories</a>
           </li>
           <li>
-            <a href="/character">Characters</a>
+            <a href="/random-meal">Surprise me!</a>
           </li>
           <li>
-            <a href="/quote">Quotes</a>
+            <a href="/ingredients">Ingredients</a>
           </li>
         </ul>
       </nav>

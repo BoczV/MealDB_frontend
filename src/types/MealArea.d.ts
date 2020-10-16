@@ -1,0 +1,3 @@
+type MealArea = {
+    strArea: string
+}

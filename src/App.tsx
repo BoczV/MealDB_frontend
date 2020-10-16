@@ -1,10 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './style/App.css';
-import Axios from 'axios'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import MealCategories from './components/MealCategories';
 import NavBar from './components/NavBar';
-import Meals from './components/Meals';
+import MealsByCategory from './components/MealsByCategory';
+import Home from './components/Home';
+import DetailedMeal from './components/DetailedMeal';
+import Categories from "./components/Categories";
+import Areas from './components/Areas';
+import MealsByArea from './components/MealsByArea';
 
 function App() {
 
@@ -12,9 +15,12 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        <Route exact path="/" component={MealCategories} />
-        <Route exact path="/meal/:mealCategory" component={Meals} />
-        
+        <Route exact path="/" component={Home} />
+        <Route exact path="/category" component={Categories} />
+        <Route exact path="/category/:mealCategory" component={MealsByCategory} />
+        <Route exact path="/meal/:mealId" component={DetailedMeal} />
+        <Route exact path="/area" component={Areas}/>
+        <Route exact path="/area/:mealArea" component={MealsByArea} />
       </Router>
     </div>
   );
