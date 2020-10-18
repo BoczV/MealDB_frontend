@@ -11,6 +11,7 @@ import RandomMeal from './components/RandomMeal';
 import Ingredients from './components/Ingredients';
 import MealsByIngredient from './components/MealsByIngredient';
 import Search from './components/Search';
+import ContactMe from './components/ContactMe';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/ingredients" component={Ingredients}/>
         <Route exact path="/meals-by-ingredient/:ingredient" component={MealsByIngredient}/>
         <Route exact path="/search" component={Search}/>
+        <Route exact path="/contact-me" component={ContactMe}/>
       </Router>
     </div>
   );

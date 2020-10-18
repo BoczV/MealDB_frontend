@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import "../style/Navbar.css";
 
 export default function NavBar() {
@@ -25,6 +25,9 @@ export default function NavBar() {
           </li>
           <li>
             <a href="/ingredients">Ingredients</a>
+          </li>
+          <li>
+            <a href="/contact-me">Contact me</a>
           </li>
         </ul>
       </nav>
