@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import "../style/MealCategory.css"
 
 
-function MealCategories() {
+function Categories() {
 
     const [mealCategories, setMealCategories] = useState<MealCategory[] | undefined>()
 
@@ -17,7 +17,7 @@ function MealCategories() {
         <div>
             <h1>Meal Categories</h1>
          {mealCategories?.map((category: MealCategory) => (
-          <div className="Card2 ph1">
+          <div className="Card2 ph1" key={category.idCategory}>
             <div className="overlay" style={{backgroundImage: `url(${category.strCategoryThumb})`,
                 backgroundSize: "auto 18rem", backgroundPosition: "center center"}}>
                 <h2 className="title">{category.strCategory}</h2>
@@ -29,5 +29,5 @@ function MealCategories() {
     )
 }
 
-export default MealCategories
+export default Categories
 

@@ -3,7 +3,7 @@ import React from 'react';
 import "../style/Meal.css"
 
 interface MealProps {
-    meal: Meal
+    meal: MealType
 }
 
 export const Meal: React.FC<MealProps> = ({meal}) => {

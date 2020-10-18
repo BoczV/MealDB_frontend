@@ -15,9 +15,6 @@ export default function NavBar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/search">Search!</a>
-          </li>
-          <li>
             <a href="/area">Areas</a>
           </li>
           <li>

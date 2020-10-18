@@ -4,9 +4,9 @@ import { useParams } from 'react-router-dom';
 import { Meal } from './Meal';
 
 
-function Meals() {
+function MealsByCategory() {
     const {mealCategory} = useParams()
-    const [meals, setMeals] = useState<Meal[]>()
+    const [meals, setMeals] = useState<MealType[]>()
 
     useEffect(() => {
         const url = `http://localhost:8762/mealservice/meal-category/${mealCategory}`
@@ -16,7 +16,7 @@ function Meals() {
     }, [])
     return (
         <div>
-            <h1>{mealCategory}</h1>
+            <h1>Foods containing {mealCategory}</h1>
             {meals?.map((meal) => (
                 <Meal key={meal.idMeal} meal={meal}/>
             ))}
@@ -24,4 +24,4 @@ function Meals() {
     )
 }
 
-export default Meals
+export default MealsByCategory

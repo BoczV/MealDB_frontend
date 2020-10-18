@@ -15,7 +15,7 @@ function Areas() {
         <div>
             <h1>Meal Categories</h1>
          {mealAreas?.map((area: MealArea) => (
-          <div className="Card2 ph1">
+          <div className="Card2 ph1" key={area.strArea}>
             <div className="overlay">
                 <h2 className="title">{area.strArea}</h2>
                 <a className="link" href={`/area/${area.strArea}`}>Open</a>

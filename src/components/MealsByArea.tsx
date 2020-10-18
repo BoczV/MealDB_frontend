@@ -5,7 +5,7 @@ import { Meal } from './Meal';
 
 function MealsByArea() {
     const { mealArea } = useParams()
-    const [meals, setMeals] = useState<Meal[]>()
+    const [meals, setMeals] = useState<MealType[]>()
 
     useEffect(() => {
         const url = `http://localhost:8762/mealservice/meal-area/${mealArea}`
@@ -15,7 +15,7 @@ function MealsByArea() {
     }, [])
     return (
         <div>
-            <h1>{mealArea}</h1>
+            <h1>{mealArea} foods</h1>
             {meals?.map((meal) => (
                  <Meal key={meal.idMeal} meal={meal}/>
             ))}
