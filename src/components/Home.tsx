@@ -7,7 +7,7 @@ function Home() {
 
     return (
         <div>
-            <h1>MealDB, your recipe website!</h1>
+            <h1>Recipe Bear, your recipe website!</h1>
             <Search/>
         </div>
     )

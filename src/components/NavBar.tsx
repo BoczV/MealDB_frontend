@@ -6,7 +6,7 @@ export default function NavBar() {
 
     <div className="header">
       <p className="home" id="logo">
-        Meal DB
+        Recipe Bear
       </p>
 
       <nav>
